@@ -69,6 +69,20 @@ export const ShardCalculator = () => {
       </div>
       <div style={{ display: "flex", flexDirection: "row", marginTop: 50 }}>
         <div style={{ display: "flex", flexDirection: "column", width: 200 }}>
+          <div>Legendaries Expected:</div>
+          {ShardReturnsLeg.reduce((prev, curr) => prev + curr.i * curr.chance, 0)
+            .toString()
+            .substring(0, 4)}
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", width: 200 }}>
+          <div>Epics Expected:</div>
+          {ShardReturnsEpic.reduce((prev, curr) => prev + curr.i * curr.chance, 0)
+            .toString()
+            .substring(0, 4)}
+        </div>
+      </div>
+      <div style={{ display: "flex", flexDirection: "row", marginTop: 50 }}>
+        <div style={{ display: "flex", flexDirection: "column", width: 200 }}>
           <div>Legendary chances:</div>
           {ShardReturnsLeg.map((item) => {
             return (
